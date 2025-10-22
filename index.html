@@ -49,7 +49,10 @@
       <label>長さ（小節）<input name="lengthBars" type="number" min="1" value="4" required></label>
       <label>色 <input name="color" type="color" value="#8fd3ff"></label>
       <menu>
-        <button value="cancel">キャンセル</button>
+        <!-- 変更前 -->
+<!-- <button value="cancel">キャンセル</button> -->
+<!-- 変更後：submitをやめて明示的に閉じる -->
+     <button type="button" id="cancelAdd">キャンセル</button>
         <button id="confirmAdd" value="default">追加</button>
       </menu>
     </form>

@@ -23,6 +23,12 @@ const $import = document.getElementById("importJson");
 const $dialog = document.getElementById("regionDialog");
 const $form = document.getElementById("regionForm");
 const $addTrack = document.getElementById("addTrack");
+const $cancelAdd = document.getElementById("cancelAdd");
+
+// 追加：キャンセルは何もせず閉じる
+$cancelAdd.addEventListener("click", () => {
+  $dialog.close("cancel");
+});
 
 function render() {
   $timeline.innerHTML = "";
@@ -56,13 +62,26 @@ function render() {
 
     const name = document.createElement("div");
     name.className = "name";
+
+    const no = document.createElement("div");
+    no.className = "no";
+    no.textContent = (state.tracks.indexOf(t) + 1); // 1始まり
+
     const span = document.createElement("span");
     span.textContent = t.name;
+    span.title = "ダブルクリックでリネーム";
+    span.addEventListener("dblclick", () => {
+      const next = prompt("トラック名を変更", t.name);
+      if (next && next.trim()) { t.name = next.trim(); render(); }
+    });
+
     const plus = document.createElement("button");
     plus.className = "icon-btn";
     plus.textContent = "+";
     plus.title = "このトラックにリージョン追加";
     plus.addEventListener("click", () => openAddDialog(t.id));
+
+    name.appendChild(no);
     name.appendChild(span);
     name.appendChild(plus);
 
@@ -146,8 +165,13 @@ function openAddDialog(trackId, startBar = 1) {
   $form.elements["startBar"].value = startBar;
   $dialog.returnValue = "";
   $dialog.showModal();
+
+  // ここで毎回新しくハンドラを張り直す
   $form.onsubmit = (e) => {
     e.preventDefault();
+    // キャンセルはここに来ないが、念のためガード
+    if ($dialog.returnValue === "cancel") return;
+
     const label = $form.elements["label"].value || "Region";
     const startBar = parseInt($form.elements["startBar"].value, 10);
     const lengthBars = parseInt($form.elements["lengthBars"].value, 10);

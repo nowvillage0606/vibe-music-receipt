@@ -30,7 +30,7 @@ body {
 }
 .palette button {
   border: 1px solid #2a3140; background: #10141d; color: var(--text); border-radius: 20px; padding: 6px 12px; cursor: pointer;
-}
+} 
 
 #timeline {
   padding: 12px 16px 60px;
@@ -50,6 +50,9 @@ body {
 }
 .ruler {
   background: #0d1016; border: 1px solid #242b39; border-radius: 8px; padding: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 .ruler .bar {
   height: 24px; border-right: 1px solid var(--grid);
@@ -60,6 +63,15 @@ body {
 .track {
   display: grid; grid-template-columns: 180px 1fr; column-gap: 12px; margin-top: 8px; align-items: stretch;
 }
+
+/* 追記：番号バッジ */
+.track .no {
+  width: 26px; height: 26px; border-radius: 6px;
+  background: #0d1016; border: 1px solid #242b39;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-right: 8px; font-weight: 700; color: var(--muted);
+}
+
 .track .name {
   background: var(--panel); border: 1px solid #242b39; border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;
 }
