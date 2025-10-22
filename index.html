@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vibe-music-receipt</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Vibe-music-receipt</div>
+    <div class="controls">
+      <label>BPM <input id="bpm" type="number" value="128" min="40" max="220"></label>
+      <label>Meter
+        <select id="meter">
+          <option value="4/4" selected>4/4</option>
+          <option value="3/4">3/4</option>
+          <option value="6/8">6/8</option>
+        </select>
+      </label>
+      <label>Bars <input id="bars" type="number" value="64" min="8" max="512"></label>
+      <button id="applyGrid">Apply Grid</button>
+    </div>
+    <div class="io">
+      <button id="exportJson">Export (⌘/Ctrl+E)</button>
+      <label class="import-btn">
+        Import (⌘/Ctrl+I) <input id="importJson" type="file" accept="application/json" hidden>
+      </label>
+    </div>
+  </header>
+
+  <section class="palette">
+    <button data-template="Intro" data-color="#8fd3ff">Intro</button>
+    <button data-template="Verse" data-color="#b2f5ea">Verse</button>
+    <button data-template="Chorus" data-color="#ffd166">Chorus</button>
+    <button data-template="Break" data-color="#ffadad">Break</button>
+    <button data-template="Outro" data-color="#cdb4db">Outro</button>
+    <button id="addTrack">+ Track</button>
+  </section>
+
+  <main id="timeline"></main>
+
+  <!-- Quick add modal -->
+  <dialog id="regionDialog">
+    <form method="dialog" id="regionForm">
+      <h3>リージョン追加</h3>
+      <label>ラベル <input name="label" required></label>
+      <label>開始小節 <input name="startBar" type="number" min="1" value="1" required></label>
+      <label>長さ（小節）<input name="lengthBars" type="number" min="1" value="4" required></label>
+      <label>色 <input name="color" type="color" value="#8fd3ff"></label>
+      <menu>
+        <button value="cancel">キャンセル</button>
+        <button id="confirmAdd" value="default">追加</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
