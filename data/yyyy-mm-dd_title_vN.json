@@ -1,0 +1,57 @@
+{
+  "title": "楽曲タイトル（例：Prelude）",
+  "bpm": 120,
+  "meter": "4/4",
+  "bars": 64,
+  "barWidthPx": 40,
+  "tracks": [
+    {
+      "id": "t1",
+      "name": "Drums"
+    },
+    {
+      "id": "t2",
+      "name": "Bass"
+    },
+    {
+      "id": "t3",
+      "name": "Synth"
+    },
+    {
+      "id": "t4",
+      "name": "Vox"
+    }
+  ],
+  "regions": [
+    {
+      "id": "r1",
+      "trackId": "t1",
+      "label": "Intro Drums",
+      "startBar": 1,
+      "lengthBars": 8,
+      "color": "#8fd3ff",
+      "type": "section",
+      "notes": "軽めのキック、16分裏のハイハットで疾走感を"
+    },
+    {
+      "id": "r2",
+      "trackId": "t2",
+      "label": "Bass Main",
+      "startBar": 9,
+      "lengthBars": 16,
+      "color": "#b2f5ea",
+      "type": "loop",
+      "notes": "Aメロのベースループ。音数は控えめ。"
+    },
+    {
+      "id": "r3",
+      "trackId": "t3",
+      "label": "Pad Atmos",
+      "startBar": 1,
+      "lengthBars": 64,
+      "color": "#ffd166",
+      "type": "texture",
+      "notes": "全体を包むアンビエンス。"
+    }
+  ]
+}
