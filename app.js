@@ -104,6 +104,15 @@ function render() {
       lane.appendChild(cell);
     }
 
+    /* ★追加：8小節ごとにマーカーを置く（1,9,17,...） */
+    for (let b = 1; b <= state.bars; b += 8) {
+      const mk = document.createElement("div");
+      mk.className = "marker";
+      mk.textContent = b;
+      mk.style.left = ((b - 1) * state.barWidthPx) + "px";
+      lane.appendChild(mk);
+    }
+
     // regions for this track
     state.regions.filter(r => r.trackId === t.id).forEach(r => {
       const el = document.createElement("div");

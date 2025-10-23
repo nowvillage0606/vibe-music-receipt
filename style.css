@@ -76,11 +76,23 @@ body {
   background: var(--panel); border: 1px solid #242b39; border-radius: 8px; padding: 10px; display: flex; justify-content: space-between; align-items: center;
 }
 .track .lane {
-  position: relative; border: 1px solid #242b39; border-radius: 8px; background: #0b0e14;
+  position: relative; padding-top: 16px; /* ←追加 */ border: 1px solid #242b39; border-radius: 8px; background: #0b0e14;
   display: grid; grid-template-columns: repeat(var(--bars), var(--barWidth));
 }
 .lane .cell { border-right: 1px solid #151b26; }
 .lane .cell:nth-child(4n) { border-right: 1px solid #222a38; }
+
+/* 8小節おきの小節番号マーカー */
+.lane .marker {
+  position: absolute;
+  top: -6px;                /* レーンの枠内の上端に寄せる */
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: var(--muted);
+  pointer-events: none;     /* ドラッグ操作の邪魔をしない */
+  user-select: none;
+  opacity: 0.9;
+} 
 
 .region {
   position: absolute; top: 6px; height: calc(100% - 12px);
