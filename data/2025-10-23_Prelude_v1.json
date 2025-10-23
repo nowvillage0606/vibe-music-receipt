@@ -1,0 +1,167 @@
+{
+  "title": "Prelude",
+  "bpm": 60,
+  "meter": "4/4",
+  "bars": 14,
+  "barWidthPx": 40,
+  "tracks": [
+    {
+      "id": "t1",
+      "name": "Room Silence"
+    },
+    {
+      "id": "t2",
+      "name": "Bird Chirp"
+    },
+    {
+      "id": "t3",
+      "name": "Clock Tick"
+    },
+    {
+      "id": "t4",
+      "name": "Alarm Clock"
+    },
+    {
+      "id": "t5",
+      "name": "Footsteps"
+    },
+    {
+      "id": "t6",
+      "name": "Clothes & Bag"
+    },
+    {
+      "id": "t7",
+      "name": "Door Open"
+    },
+    {
+      "id": "t8",
+      "name": "Train Rumble"
+    },
+    {
+      "id": "t9",
+      "name": "Crowd Noise"
+    },
+    {
+      "id": "t10",
+      "name": "Handle Sway"
+    },
+    {
+      "id": "t11",
+      "name": "Wind Ambience"
+    },
+    {
+      "id": "t12",
+      "name": "Vocal Poetry"
+    }
+  ],
+  "regions": [
+    {
+      "id": "r1",
+      "trackId": "t1",
+      "label": "Room Silence",
+      "startBar": 1,
+      "lengthBars": 4,
+      "color": "#dfe7fd",
+      "notes": "静かな導入。寝室の空気感。"
+    },
+    {
+      "id": "r2",
+      "trackId": "t2",
+      "label": "Bird Chirp",
+      "startBar": 1,
+      "lengthBars": 4,
+      "color": "#a2d2ff",
+      "notes": "朝の始まりを象徴。"
+    },
+    {
+      "id": "r3",
+      "trackId": "t3",
+      "label": "Clock Tick",
+      "startBar": 1,
+      "lengthBars": 6,
+      "color": "#bde0fe",
+      "notes": "現実の気配。軽くパン振りしても良い。"
+    },
+    {
+      "id": "r4",
+      "trackId": "t4",
+      "label": "Alarm Clock Fade-in",
+      "startBar": 2,
+      "lengthBars": 2,
+      "color": "#ffc8dd",
+      "notes": "遠くからフェードイン。"
+    },
+    {
+      "id": "r5",
+      "trackId": "t5",
+      "label": "Footsteps Fast",
+      "startBar": 5,
+      "lengthBars": 4,
+      "color": "#cdb4db",
+      "notes": "通勤の早足。軽いストレッチで焦燥感。"
+    },
+    {
+      "id": "r6",
+      "trackId": "t6",
+      "label": "Clothes & Bag",
+      "startBar": 5,
+      "lengthBars": 3,
+      "color": "#ffafcc",
+      "notes": "衣擦れ・ファスナー等の動作音。"
+    },
+    {
+      "id": "r7",
+      "trackId": "t7",
+      "label": "Door Open/Close",
+      "startBar": 5,
+      "lengthBars": 1,
+      "color": "#ffd6a5",
+      "notes": "場面転換のサイン。"
+    },
+    {
+      "id": "r8",
+      "trackId": "t8",
+      "label": "Train Rumble",
+      "startBar": 9,
+      "lengthBars": 2,
+      "color": "#b9fbc0",
+      "notes": "車輪・レールの低周波。"
+    },
+    {
+      "id": "r9",
+      "trackId": "t9",
+      "label": "Crowd Noise",
+      "startBar": 9,
+      "lengthBars": 2,
+      "color": "#98f5e1",
+      "notes": "ざわめき。個の埋没を演出。"
+    },
+    {
+      "id": "r10",
+      "trackId": "t10",
+      "label": "Handle Sway",
+      "startBar": 9,
+      "lengthBars": 2,
+      "color": "#90dbf4",
+      "notes": "金属の小さな揺れ。"
+    },
+    {
+      "id": "r11",
+      "trackId": "t11",
+      "label": "Wind Ambience",
+      "startBar": 11,
+      "lengthBars": 4,
+      "color": "#fefae0",
+      "notes": "希望の余韻。ハイ帯のアンビエンス。"
+    },
+    {
+      "id": "r12",
+      "trackId": "t12",
+      "label": "Vocal Poetry (全編)",
+      "startBar": 1,
+      "lengthBars": 14,
+      "color": "#ffadad",
+      "notes": "ミクの語り。全体をカバー。"
+    }
+  ]
+}
